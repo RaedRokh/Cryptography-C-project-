@@ -69,11 +69,16 @@ void generate_symmetric_key(unsigned char* key, int key_length) {
     EVP_CIPHER_CTX_free(ctx);
 }
 
-int main()
+int main2()
 {
     /* generate a random symmetric key */
     unsigned char symmetric_key[32];
     generate_symmetric_key(symmetric_key, 32);
+    printf("Symmetric key: ");
+    for (int i = 0; i < sizeof(symmetric_key); i++) {
+        printf("%02x", symmetric_key[i]);
+    }
+    printf("\n");
 
     /* generate a random EC key pair */
 
@@ -93,10 +98,30 @@ int main()
     const EC_GROUP* group = EC_KEY_get0_group(eckey);
     const EC_POINT* pub_key = EC_KEY_get0_public_key(eckey);
     const EC_POINT* priv_key = EC_KEY_get0_private_key(eckey);
+    // Print the private key in hex format
+    char* priv_key_hex = BN_bn2hex(priv_key);
+    printf("ECDSA private key: %s\n", priv_key_hex);
+    OPENSSL_free(priv_key_hex);
 
+    // Print the public key in hex format
+    char* pub_key_hex = EC_POINT_point2hex(group, pub_key, POINT_CONVERSION_UNCOMPRESSED, NULL);
+    printf("ECDSA public key: %s\n", pub_key_hex);
+    OPENSSL_free(pub_key_hex);
     // Generate a signature using the private key and the symmetric key
     ECDSA_SIG* sig;
     generate_ecdsa_signature(symmetric_key, sizeof(symmetric_key), priv_key, &sig);
+    // Display the signature
+    unsigned char* der_sig = NULL;
+    size_t der_sig_len = i2d_ECDSA_SIG(sig, &der_sig);
+    if (der_sig_len <= 0) {
+        printf("Error: Failed to encode ECDSA signature.\n");
+        return 1;
+    }
+    printf("ECDSA signature:\n");
+    for (size_t i = 0; i < der_sig_len; i++) {
+        printf("%02X", der_sig[i]);
+    }
+    printf("\n");
 
     // Verify the signature using the public key and the symmetric key
     int verify_result = verify_ecdsa_signature(symmetric_key, sizeof(symmetric_key), pub_key, sig);

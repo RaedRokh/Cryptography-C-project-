@@ -133,6 +133,8 @@
   <ItemGroup>
     <ClCompile Include="ECDSA.c" />
     <ClCompile Include="extractor.c" />
+    <ClCompile Include="symmetric.c" />
+    <ClCompile Include="timecount.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
