@@ -1,9 +1,30 @@
 ﻿  ECDSA.c
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(9,21): warning C4996: 'EC_KEY_new_by_curve_name': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(15,10): warning C4996: 'EC_KEY_set_private_key': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(17,9): warning C4996: 'EC_KEY_free': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(21,28): warning C4996: 'ECDSA_size': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(22,12): warning C4996: 'ECDSA_do_sign': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(25,9): warning C4996: 'EC_KEY_free': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(29,5): warning C4996: 'EC_KEY_free': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(34,21): warning C4996: 'EC_KEY_new_by_curve_name': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(40,10): warning C4996: 'EC_KEY_set_public_key': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(42,9): warning C4996: 'EC_KEY_free': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(46,18): warning C4996: 'ECDSA_do_verify': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(48,5): warning C4996: 'EC_KEY_free': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(99,68): warning C4133: 'function': incompatible types - from 'const EC_POINT *' to 'const BIGNUM *'
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(112,26): warning C4090: 'function': different 'const' qualifiers
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(113,21): warning C4090: 'function': different 'const' qualifiers
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(81,21): warning C4996: 'EC_KEY_new_by_curve_name': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(87,10): warning C4996: 'EC_KEY_generate_key': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(93,29): warning C4996: 'EC_KEY_get0_group': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(94,31): warning C4996: 'EC_KEY_get0_public_key': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(95,32): warning C4996: 'EC_KEY_get0_private_key': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.c(95,21): warning C4133: 'initializing': incompatible types - from 'const BIGNUM *' to 'const EC_POINT *'
   extractor.c
 C:\Users\raed\source\repos\ECDSA\ECDSA\extractor.c(5,24): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\raed\source\repos\ECDSA\ECDSA\extractor.c(14,25): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   Generating code
   Previous IPDB not found, fall back to full compilation.
-  All 4 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   ECDSA.vcxproj -> C:\Users\raed\source\repos\ECDSA\Release\ECDSA.exe
