@@ -18,5 +18,8 @@
     <ClCompile Include="ECDSA.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="extractor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
