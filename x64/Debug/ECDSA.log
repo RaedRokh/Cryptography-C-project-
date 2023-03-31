@@ -1,0 +1,10 @@
+﻿  ECDSA.cpp
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.cpp(13,5): warning C4996: 'SHA256_Init': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.cpp(14,5): warning C4996: 'SHA256_Update': Since OpenSSL 3.0
+C:\Users\raed\source\repos\ECDSA\ECDSA\ECDSA.cpp(15,5): warning C4996: 'SHA256_Final': Since OpenSSL 3.0
+ECDSA.obj : error LNK2019: unresolved external symbol SHA256_Init referenced in function "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl sha256(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?sha256@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@Z)
+ECDSA.obj : error LNK2019: unresolved external symbol SHA256_Update referenced in function "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl sha256(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?sha256@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@Z)
+ECDSA.obj : error LNK2019: unresolved external symbol SHA256_Final referenced in function "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl sha256(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?sha256@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@Z)
+B:\out\STATIC\x64\Release\lib\libcrypto.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+B:\out\STATIC\x64\Release\lib\libssl.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\raed\source\repos\ECDSA\x64\Debug\ECDSA.exe : fatal error LNK1120: 3 unresolved externals
