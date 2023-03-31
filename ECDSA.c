@@ -69,7 +69,7 @@ void generate_symmetric_key(unsigned char* key, int key_length) {
     EVP_CIPHER_CTX_free(ctx);
 }
 
-int main2()
+int main()
 {
     /* generate a random symmetric key */
     unsigned char symmetric_key[32];
